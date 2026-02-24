@@ -76,7 +76,7 @@ These earlier runs show the hallmarks of reward-shaping failure: oscillating rew
 
 ### Why Q-Learning may not be optimal Here
 
-1. **Deterministic environment.** The race simulation has no randomness — tire degradation, lap times, and rival behavior are fully predictable. 
+1. **Deterministic environment.** The race simulation has no randomness, tire degradation, lap times, and rival behavior are fully predictable. 
 
 2. **Reward shaping is fragile.** Early attempts used penalties (-500, -1000, -1500, -5000) to discourage bad behavior (pitting too early, using only one compound, excessive pit stops). The agent consistently found loopholes:
    - **Penalty too small?** Agent accepts the penalty because the time savings outweigh it.
@@ -91,7 +91,7 @@ These earlier runs show the hallmarks of reward-shaping failure: oscillating rew
 
 ### Takeaway
 
-Q-Learning with action masking works for this problem, but it required significant iteration to arrive at a correct formulation. The exercise demonstrates both the power and the fragility of reward shaping in reinforcement learning — and why constraining the action space is often more effective than crafting complex penalty functions.
+Q-Learning with action masking works for this problem, but it required significant iteration to arrive at a correct formulation. The exercise demonstrates both the power and the fragility of reward shaping in reinforcement learning and why constraining the action space is often more effective than crafting complex penalty functions.
 
 ## Tech Stack
 
