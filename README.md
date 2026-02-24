@@ -39,20 +39,6 @@ A `RivalBot` class simulates a rival driver with a fixed pit stop strategy (e.g.
 - **NumPy** — Numerical operations
 - **Seaborn / Matplotlib** — Visualization
 
-## Getting Started
-
-```bash
-# Clone the repo
-git clone https://github.com/yourusername/F1-PitStopStrategyOptimization.git
-cd F1-PitStopStrategyOptimization
-
-# Install dependencies
-pip install fastf1 pandas numpy seaborn matplotlib
-
-# Open the notebook
-jupyter notebook Pipe.ipynb
-```
-
 ## Roadmap
 
 - [x] Load and explore real F1 race data
