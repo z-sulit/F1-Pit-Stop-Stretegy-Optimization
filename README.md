@@ -46,8 +46,12 @@ A `RivalBot` class simulates a rival driver with a fixed pit stop strategy (e.g.
 - [x] Build tire degradation model with cliff
 - [x] Create a basic rival bot
 - [ ] Build full race simulation loop
+- [ ] Implement Phase 2: Environment Design (The "Gym")
+  - Use Gymnasium library to structure the RL environment
+  - State Space: Current Lap, Current Tire Age, Current Tire Compound, Gap to Rival (normalized Box space)
+  - Action Space: 0 (Stay out), 1 (Pit for Softs), 2 (Pit for Mediums), 3 (Pit for Hards)
+  - Reward Function: Time-based rewards mimicking race time
 - [ ] Implement strategy optimizer (find best pit lap)
-- [ ] Compare multiple strategies against the rival
 - [ ] Visualize strategy outcomes
 - [ ] Support multi-stop strategies
 - [ ] Test across different circuits and seasons
