@@ -39,18 +39,6 @@ A `RivalBot` class simulates a rival driver with a fixed pit stop strategy (e.g.
 - **NumPy** — Numerical operations
 - **Seaborn / Matplotlib** — Visualization
 
-## Roadmap
-
-- [x] Load and explore real F1 race data
-- [x] Calculate pit stop time loss
-- [x] Build tire degradation model with cliff
-- [x] Create a basic rival bot
-- [ ] Build full race simulation loop
-- [ ] Implement strategy optimizer (find best pit lap)
-- [ ] Visualize strategy outcomes
-- [ ] Support multi-stop strategies
-- [ ] Test across different circuits and seasons
-
 ## License
 
 This project is for educational and personal use.
