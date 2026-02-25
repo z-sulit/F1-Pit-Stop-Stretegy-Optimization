@@ -47,12 +47,13 @@ A `RivalBot` runs a fixed **Medium → Hard** strategy, pitting on Lap 22. The a
 
 ### Win Rate vs. Rival Base Lap Time
 
-| Rival Base Pace | Agent Win Rate | Agent Strategy | Time Advantage |
-| **89.0s**       | **100%**     | Soft → Hard, Pit Lap 11 | +126.1s |
-| **87.0s**       | **100%**     | Soft → Hard, Pit Lap 11 | +24.1s  |
-| **86.5s**       | **0%**       | Soft → Hard, Pit Lap 11 | −1.1s   |
+Soft -> Hard, Pit Lap 11
 
-The agent consistently discovers the **Soft → Hard** strategy with a pit stop around **Lap 11**, which is mathematically optimal given the degradation model. It wins convincingly against slower rivals but cannot overcome a rival with identical base pace due to the rival's superior Medium compound choice for the first stint.
+Rival Pace 89.0s: This results in a 100% win rate with a massive +126.1s time advantage.
+
+Rival Pace 87.0s: This results in a 100% win rate with a significant +24.1s time advantage.
+
+Rival Pace 86.5s: This results in a 0% win rate, causing a -1.1s time deficit.
 
 ### Training Convergence
 
@@ -70,7 +71,7 @@ The reward curve plateaus at approximately **-4,346**, corresponding to the agen
 
 ![Failed run — Reward shaping conflicts](outputrun4_qarlgo.png)
 
-These earlier runs show the hallmarks of reward-shaping failure: oscillating rewards, periodic collapses, and inability to converge on a stable policy. The agent would exploit penalty loopholes (e.g., pitting every 5 laps on fresh Softs, or deliberately getting disqualified).
+These earlier runs show the reward-shaping failure: oscillating rewards, periodic collapses, and inability to converge on a stable policy. The agent would exploit penalty loopholes (e.g., pitting every 5 laps on fresh Softs, or deliberately getting disqualified).
 
 ## Discussion: Limitations of This Approach
 
