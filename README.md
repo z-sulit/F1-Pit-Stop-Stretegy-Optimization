@@ -9,18 +9,20 @@ This project uses **Q-Learning** to train an agent that decides the optimal lap 
 
 ### Phase 1: Data & Simulation Setup
 
-Race data is loaded from the **2023 Italian Grand Prix (Monza)** using [FastF1](https://github.com/theOehrly/Fast-F1). Key extracted parameters:
+Race data is loaded from the **2023 Italian Grand Prix (Monza)** using [FastF1]. Key extracted parameters:
 
 - **Base Lap Time:** ~86.5s
 - **Estimated Pit Loss:** ~20.3s (median pit lap time − median race pace)
 
 A tire degradation model simulates realistic performance drop-off:
 
-| Compound | Deg Rate   | Cliff Starts | Extra Deg After Cliff |
-|----------|------------|--------------|----------------------|
-| Soft     | 0.05 s/lap | Lap 16       | +0.40 s/lap          |
-| Medium   | 0.03 s/lap | Lap 26       | +0.20 s/lap          |
-| Hard     | 0.015 s/lap | —           | None                 |
+Soft: Deg Rate: 0.05 s/lap; Cliff Starts: Lap 16; Extra Deg After Cliff: +0.40 s/lap.
+
+Medium: Deg Rate: 0.03 s/lap; Cliff Starts: Lap 26; Extra Deg After Cliff: +0.20 s/lap.
+
+Hard: Deg Rate: 0.015 s/lap; Cliff Starts: N/A; Extra Deg After Cliff: None.
+
+
 
 ### Phase 2: Set up Environment
 
