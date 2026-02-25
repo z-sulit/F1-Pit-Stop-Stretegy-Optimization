@@ -4,11 +4,7 @@ import numpy as np
 import pandas as pd
 
 def preprocess_laps(laps):
-    """
-    Preprocess F1 lap data: handle missing values, remove outliers, 
-    standardize types, encode categories, and scale features.
-    """
-    
+
     laps = laps.copy()
     
     # 1. Handle Missing Values (only LapTime and TyreLife)
@@ -57,7 +53,7 @@ def preprocess_laps(laps):
     laps = pd.concat([laps, encoded_df], axis=1)
     print(f"  Created {encoded_df.shape[1]} features")
     
-    # 5. Scaling (for ML models, raw columns preserved for RL)
+    # 5. Scaling 
     print("\nStep 5: Scaling features")
     scaler = StandardScaler()
     columns_to_scale = [
