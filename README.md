@@ -49,11 +49,11 @@ A `RivalBot` runs a fixed **Medium → Hard** strategy, pitting on Lap 22. The a
 
 ### Win Rate vs. Rival Base Lap Time
 
-Soft -> Hard, Pit Lap 11
+Soft -> Hard, Pit Lap 10
 
 Rival Pace 89.0s: This results in a 100% win rate with a massive +126.1s time advantage.
 
-Rival Pace 87.0s: This results in a 100% win rate with a significant +24.1s time advantage.
+Rival Pace 87.0s: This results in a 100% win rate with a significant +24.0s time advantage.
 
 Rival Pace 86.5s: This results in a 0% win rate, causing a -1.1s time deficit.
 
@@ -108,3 +108,8 @@ Q-Learning with action masking works for this problem, but it required significa
 ## License
 
 This project is for educational and personal use.
+
+## Important Note
+
+The code is not optimized for production use. It is a simple implementation of Q-Learning for educational purposes.
+Outputs in Pipe.ipynb may not be the same as the ones in the README.md. Changes may be made.
